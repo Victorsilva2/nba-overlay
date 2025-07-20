@@ -12,29 +12,27 @@ body {
 }
 
 .teams {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;                
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-template-rows: repeat(6, 1fr);    /* 6 rows */
+  gap: 6px;
   width: 100%;
-  flex: 1 1 auto;
-  margin-bottom: 4px;
-  padding-left: 8px;   
-  padding-right: 8px;  
+  padding: 8px 0;
   box-sizing: border-box;
+  justify-items: center;
+  align-items: center;
 }
 
 .team-logo {
-  width: 48px;             
-  height: 48px;
-  margin: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  box-shadow: 0 0 8px gold;
+  background: #222;
   transition: 0.3s;
   cursor: pointer;
-  border: 3px solid gold;           
-  border-radius: 12px;
-  box-shadow: 0 0 12px gold;
-  background: #222;
+  margin: 0;
 }
 
 .team-logo.grayed {
