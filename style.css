@@ -13,19 +13,19 @@ body {
 
 .teams {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns */
-  grid-template-rows: repeat(6, 1fr);    /* 6 rows */
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(6, 1fr);    
   gap: 0;
   width: 300px;
   height: 360px;
-  place-self: center;                    /* Center grid in parent flexbox */
+  place-self: center;                    
   box-sizing: border-box;
   justify-items: center;
   align-items: center;
 }
 
 .team-logo {
-  width: 40px;                           /* Even smaller logos */
+  width: 40px;                           
   height: 40px;
   border: 2px solid gold;
   border-radius: 10px;
@@ -34,7 +34,7 @@ body {
   transition: 0.3s;
   cursor: pointer;
   margin: 0;
-  object-fit: contain;                    /* Keep logo aspect ratio */
+  object-fit: contain;                    
 }
 
 .team-logo.grayed {
