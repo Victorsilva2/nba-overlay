@@ -8,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
 }
 
 .teams {
@@ -16,15 +16,13 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  gap: 8px;                /* Less gap for more logos */
+  gap: 8px;
   width: 100%;
-  box-sizing: border-box;
-  flex: 1 1 auto;          /* Take up available space */
+  flex: 1 1 auto;         /* Take up available space */
 }
 
 .team-logo {
-  width: 70px;             /* Even bigger logos */
+  width: 70px;             /* Smaller logos */
   height: 70px;
   margin: 0;
   transition: 0.3s;
@@ -35,7 +33,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 2px 0 0 0;       /* Minimal margin */
+  align-items: center;
+  margin: 8px 0 0 0;
+  flex: 0 0 auto;
 }
 
 .branding {
@@ -43,13 +43,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px 0 0 0;       /* Minimal margin */
+  margin: 8px 0 0 0;
+  flex: 0 0 auto;
 }
 
 .branding img {
   width: 48px;
   height: 48px;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .grayed {
