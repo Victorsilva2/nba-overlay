@@ -16,18 +16,17 @@ body {
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
   grid-template-rows: repeat(6, 1fr);    /* 6 rows */
   gap: 0;                                /* No gap between logos */
-  width: 100%;                           /* Use full container width */
-  margin: 0;                             /* Remove auto margin */
+  width: 300px;                          /* Exact grid width for 5 logos */
+  height: 360px;                         /* Exact grid height for 6 logos */
+  margin: auto;                          /* Center grid in parent */
   box-sizing: border-box;
-  justify-items: stretch;                /* Stretch logos to fill columns */
-  align-items: stretch;                  /* Stretch logos to fill rows */
+  justify-items: center;
+  align-items: center;
 }
 
 .team-logo {
-  width: 100%;                           /* Fill grid cell horizontally */
-  height: 100%;                          /* Fill grid cell vertically */
-  max-width: 60px;                       /* Prevent logos from getting too big */
-  max-height: 60px;
+  width: 60px;                           /* 300px / 5 columns = 60px */
+  height: 60px;                          /* 360px / 6 rows = 60px */
   border: 2px solid gold;
   border-radius: 10px;
   box-shadow: 0 0 8px gold;
