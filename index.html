@@ -26,21 +26,32 @@
       cursor: pointer;
     }
 
+    .team-logo:hover {
+      transform: scale(1.08);
+    }
+
+    .selected:not(.grayed) {
+      box-shadow: 0 0 16px 6px gold;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
     .grayed {
       filter: grayscale(100%);
       opacity: 0.5;
+      box-shadow: none !important;
     }
 
     .footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 15px;
       gap: 10px;
     }
 
     #resetBtn {
-      padding: 8px 12px;
+      padding: 8px 14px;
       font-size: 14px;
       cursor: pointer;
       z-index: 10;
@@ -51,17 +62,24 @@
     }
 
     .credit {
-      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 8px 16px;
+      border-radius: 12px;
       color: white;
-      opacity: 0.8;
+      font-size: 12px;
       text-align: center;
     }
 
     .credit img {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      margin-top: 5px;
+      margin-top: 6px;
+      border: 2px solid white;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -110,15 +128,17 @@
   <script>
     function toggle(img) {
       img.classList.toggle('grayed');
+      img.classList.toggle('selected');
     }
 
     function resetAll() {
       document.querySelectorAll('.team-logo').forEach(img => {
         img.classList.remove('grayed');
+        img.classList.remove('selected');
       });
     }
 
-    // Sort logos A-Z by file name
+   
     window.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('teamContainer');
       const logos = Array.from(container.getElementsByTagName('img'));
