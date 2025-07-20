@@ -15,10 +15,10 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
   grid-template-rows: repeat(6, 1fr);    /* 6 rows */
-  gap: 0;                                /* No gap between logos */
-  width: 300px;                          /* Exact grid width for 5 logos */
-  height: 360px;                         /* Exact grid height for 6 logos */
-  margin: auto;                          /* Center grid in parent */
+  gap: 0;
+  width: 300px;
+  height: 360px;
+  place-self: center;                    /* Center grid in parent flexbox */
   box-sizing: border-box;
   justify-items: center;
   align-items: center;
