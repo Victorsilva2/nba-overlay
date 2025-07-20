@@ -1,18 +1,24 @@
 body {
   margin: 0;
   background-color: transparent;
+  width: 486px;         /* Constrain width to 45% of 1080px */
+  height: 1920px;       /* Full height of Whatnot canvas */
+  overflow: hidden;     /* Prevent scrollbars */
+  position: relative;
 }
 
 .teams {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px;
-  gap: 10px;
+  padding: 6px;         /* Slightly reduced for tighter fit */
+  gap: 6px;             /* Slightly reduced for tighter fit */
+  max-width: 486px;     /* Ensure container doesn't overflow */
+  box-sizing: border-box;
 }
 
 .team-logo {
-  width: 60px;
+  width: 36px;          /* Smaller logos for more space */
   transition: 0.3s;
   cursor: pointer;
 }
