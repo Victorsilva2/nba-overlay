@@ -20,6 +20,9 @@ body {
   width: 100%;
   flex: 1 1 auto;
   margin-bottom: 4px;
+  padding-left: 8px;   /* Add padding to left */
+  padding-right: 8px;  /* Add padding to right */
+  box-sizing: border-box;
 }
 
 .team-logo {
