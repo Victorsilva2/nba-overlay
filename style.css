@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #181818; /* Dark for contrast */
+  background-color: #181818; 
   width: 486px;
   height: 370px;
   overflow: hidden;
@@ -16,22 +16,22 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 6px;                /* Smaller gap for more space */
+  gap: 6px;                
   width: 100%;
   flex: 1 1 auto;
   margin-bottom: 4px;
-  padding-left: 8px;   /* Add padding to left */
-  padding-right: 8px;  /* Add padding to right */
+  padding-left: 8px;   
+  padding-right: 8px;  
   box-sizing: border-box;
 }
 
 .team-logo {
-  width: 48px;             /* Smaller logos to fit everything */
+  width: 48px;             
   height: 48px;
   margin: 0;
   transition: 0.3s;
   cursor: pointer;
-  border: 3px solid gold;           /* Gold border effect */
+  border: 3px solid gold;           
   border-radius: 12px;
   box-shadow: 0 0 12px gold;
   background: #222;
@@ -40,7 +40,7 @@ body {
 .team-logo.grayed {
   filter: grayscale(100%);
   opacity: 0.5;
-  border: 3px solid #888;           /* Gray border when grayed */
+  border: 3px solid #888;           
   box-shadow: none;
 }
 
