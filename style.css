@@ -1,26 +1,54 @@
 body {
   margin: 0;
   background-color: transparent;
-  width: 486px;         /* Constrain width to 45% of 1080px */
-  height: 1920px;       /* Full height of Whatnot canvas */
-  overflow: hidden;     /* Prevent scrollbars */
+  width: 486px;
+  height: 400px;           /* Match your browser source height */
+  overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .teams {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 6px;         /* Slightly reduced for tighter fit */
-  gap: 6px;             /* Slightly reduced for tighter fit */
-  max-width: 486px;     /* Ensure container doesn't overflow */
+  align-items: flex-start;
+  padding: 8px 0 0 0;
+  gap: 12px;               /* More space between logos */
+  width: 100%;
   box-sizing: border-box;
 }
 
 .team-logo {
-  width: 36px;          /* Smaller logos for more space */
+  width: 60px;             /* Bigger logos */
+  height: 60px;            /* Keep logos square */
+  margin: 0;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 0 0;
+}
+
+.branding {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 0 0;
+}
+
+.branding img {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
 }
 
 .grayed {
