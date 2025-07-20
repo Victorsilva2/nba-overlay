@@ -15,31 +15,29 @@
       justify-content: center;
       align-items: center;
       gap: 6px;
-      padding: 12px 6px;
+      padding: 8px 5px;
       max-width: 100vw;
     }
 
     .team-logo {
-      width: 65px;
+      width: 50px;
       flex: 0 0 auto;
       transition: 0.3s;
       cursor: pointer;
     }
 
-    .grayed {
-      filter: grayscale(100%);
-      opacity: 0.5;
-      box-shadow: none;
+    .team-logo:hover {
+      transform: scale(1.1);
     }
 
-    .selected {
-      box-shadow: 0 0 10px 3px gold;
+    .grayed {
+      filter: grayscale(100%) brightness(80%) drop-shadow(0 0 4px gold);
     }
 
     .footer {
       display: flex;
       justify-content: center;
-      margin-top: 15px;
+      margin-top: 12px;
     }
 
     #resetBtn {
@@ -53,22 +51,24 @@
       border-radius: 6px;
     }
 
-    .brand {
+    .branding {
+      margin-top: 10px;
       display: flex;
       justify-content: center;
-      margin-top: 10px;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .brand img {
+    .branding img {
       width: 40px;
-      height: 40px;
       border-radius: 50%;
+      margin-bottom: 4px;
     }
 
-    .brand span {
-      margin-left: 8px;
+    .branding span {
+      font-size: 12px;
+      color: #333;
       font-weight: bold;
-      font-family: sans-serif;
     }
   </style>
 </head>
@@ -110,21 +110,19 @@
     <button id="resetBtn" onclick="resetAll()">Reset All</button>
   </div>
 
-  <div class="brand">
-    <img src="/logos/aChrisLogo.jpg" alt="logo">
+  <div class="branding">
+    <img src="/logos/aChrisLogo.jpg" alt="phenomenal_breaks logo">
     <span>phenomenal_breaks</span>
   </div>
 
   <script>
     function toggle(img) {
       img.classList.toggle('grayed');
-      img.classList.toggle('selected');
     }
 
     function resetAll() {
       document.querySelectorAll('.team-logo').forEach(img => {
         img.classList.remove('grayed');
-        img.classList.remove('selected');
       });
     }
   </script>
