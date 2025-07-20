@@ -15,17 +15,17 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns */
   grid-template-rows: repeat(6, 1fr);    /* 6 rows */
-  gap: 6px;
-  width: 100%;
-  padding: 8px 0;
+  gap: 2px;                              /* Minimal gap */
+  width: calc(100% - 8px);               /* Add a little horizontal space */
+  padding: 0 4px;                        /* Padding to prevent edge cut-off */
   box-sizing: border-box;
   justify-items: center;
   align-items: center;
 }
 
 .team-logo {
-  width: 40px;
-  height: 40px;
+  width: 36px;                           /* Slightly smaller logos */
+  height: 36px;
   border: 2px solid gold;
   border-radius: 10px;
   box-shadow: 0 0 8px gold;
